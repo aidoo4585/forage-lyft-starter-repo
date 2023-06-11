@@ -5,11 +5,11 @@ from engine import Engine
 
 class SternmanEngine(Engine, ABC):
     def __init__(self, warning_light_is_on):
-        self._warning_light_on = warning_light_is_on    #private 
+        self._warning_light_on : bool = warning_light_is_on    #private 
 
-    def needs_service(self):
+    def needs_service(self) -> bool:
         super().needs_service()
-        
+
         if self._warning_light_is_on:
             return True
         else:
