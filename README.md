@@ -1,4 +1,4 @@
-# Lyft Back-End Engineer Virtual Experience Project
+# Lyft Back-End Engineer Project
 Particiapted in a virtual experience offered by Lyft which emulates working as a Back-End Engineer at Lyft within a larger team made up of software engineering, product, data science, analytics and operations.
 In the assigned project my team is responsible for Lyft Rentals. Lyft 
 Rentals provides vehicles for riders who are looking to rent a vehicle for personal use such as a weekend vacation.
