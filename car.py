@@ -3,7 +3,7 @@
 from abc import ABC, abstractmethod
 
 
-#Car inherits ABC so it can be an abs class
+#Car inherits ABC so it can be an abc class
 class Car(ABC):
     def __init__(self, last_service_date):
         self.last_service_date = last_service_date

@@ -1,13 +1,15 @@
 from abc import ABC
+from engine import Engine
 
-from car import Car
+class WilloughbyEngine(Engine, ABC):
+    def __init__(self, current_mileage, last_service_mileage):
+        self._current_mileage = current_mileage             #private
+        self._last_service_mileage = last_service_mileage   #private
 
+    def needs_service(self) -> bool:
+        super().needs_service() #call from parent engine class
 
-class WilloughbyEngine(Car, ABC):
-    def __init__(self, last_service_date, current_mileage, last_service_mileage):
-        super().__init__(last_service_date)
-        self.current_mileage = current_mileage
-        self.last_service_mileage = last_service_mileage
-
-    def engine_should_be_serviced(self):
-        return self.current_mileage - self.last_service_mileage > 60000
+        if self._current_mileage > 6000:
+            return True
+        else: 
+            return self._current_mileage - self._last_service_mileage > 60000
